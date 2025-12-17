@@ -1,1 +1,8 @@
-TODO
+README for WinQD 
+Windows in Qemu on Docker (WinQD) is a fork of https://github.com/qemus/qemu.git
+    This documentaion is for installation on Unbuntu 22.04
+        QEMU install https://documentation.ubuntu.com/server/how-to/virtualisation/qemu/
+        Remmina VNC software is from https://remmina.org
+	Python agent software is from https://github.com/kevoreilly/CAPEv2
+	Additional programs, documents & configurations are Copyrighted 2025 B9Software
+
