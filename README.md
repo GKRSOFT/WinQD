@@ -47,7 +47,7 @@ This software could be used for analyzing malicious software. Files submitted to
 	mkdir image
 	mkdir iso
 	
-### Searceh and download files from internet to the iso folder:
+### Search and download files from internet to the iso folder:
 * 	Win10_1909_English_x64.iso
 * 	virtio-win-0.1.285.iso
   
