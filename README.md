@@ -17,7 +17,7 @@ This software could be used for analyzing malicious software. Files submitted to
 
 
 ### Installation
-WinQD Instalallation:
+## WinQD Instalallation:
 	cd WinQD
 	wget hxxps://github.com/qemus/qemu/archive/refs/heads/master.zip
 	unzip master.zip .
@@ -29,22 +29,22 @@ WinQD Instalallation:
 	rm -r qemu-master
 	cd src
 	
-Modify file src/entry.sh and save:
+## Modify file src/entry.sh and save:
 	coment out lines 15,16 & 30
 	add line exec ./api.py
 	
-Modify file src/server.sh and save:
+## Modify file src/server.sh and save:
 	change line 6 "8006" to "8000"
 	change line 46 nginx -e stderr to nginx
 
-Modify file src/config.sh and save:
+## Modify file src/config.sh and save:
 	change blank line 3 to : "${DISK_OPTS:=""}"
 		
-Replace file web/conf/nginx.conf:
+## Replace file web/conf/nginx.conf:
 	mv web/conf/nginx.conf web/conf/nginx.orig
 	cp nginx.conf  web/conf/
 
-Create folders:
+## Create folders:
 	mkdir image
 	mkdir iso
 	
@@ -90,11 +90,11 @@ Create folders:
         (qemu) quit
         
 ### Build the Docker file and Image:
-*   Change: 
+## Change: 
    		#FROM debian:trixie-slim
 		FROM ubuntu:22.04 
 		
-*   Add the following lines:
+## Add the following lines:
 		# WinQD
 		RUN ln -s /image/hdd.img /hdd.img
 		COPY --chmod=664 snapshot.img /
@@ -108,9 +108,9 @@ Create folders:
 		COPY --chmod=755 ./api.py /run/
 		COPY --chmod=744 nginx.conf /etc/nginx/default.conf
    
-*  NOTE: Comment out ENTRYPOINT line in Dockerfile for interactive mode
+## NOTE: Comment out ENTRYPOINT line in Dockerfile for interactive mode
 
-*  Create Sandbox:
+## Create Sandbox:
 		docker build -t WinQD/sandbox .         
 
 ### Running container interactive:
