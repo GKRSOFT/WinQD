@@ -16,8 +16,7 @@ This software could be used for analyzing malicious software. Files submitted to
     Responsibility: The user assumes all responsibility for any damage, data loss, or security breaches resulting from the use of this tool.
 
 
-### Installation
-## WinQD Instalallation:
+### WinQD Instalallation:
 	cd WinQD
 	wget hxxps://github.com/qemus/qemu/archive/refs/heads/master.zip
 	unzip master.zip .
@@ -108,7 +107,8 @@ This software could be used for analyzing malicious software. Files submitted to
 		COPY --chmod=755 ./api.py /run/
 		COPY --chmod=744 nginx.conf /etc/nginx/default.conf
    
-## NOTE: Comment out ENTRYPOINT line in Dockerfile for interactive mode
+## NOTE: 
+Comment out ENTRYPOINT line in Dockerfile for interactive mode
 
 ## Create Sandbox:
 		docker build -t WinQD/sandbox .         
