@@ -35,6 +35,10 @@ This software could be used for analyzing malicious software. Files submitted to
 	
 * Modify file src/server.sh and save:
 	change line 6 "8006" to "8000"
+	change line 46 nginx -e stderr to nginx
+
+* Modify file src/config.sh and save:
+	change blank line 3 to : "${DISK_OPTS:=""}"
 		
 * Replace file web/conf/nginx.conf:
 	mv web/conf/nginx.conf web/conf/nginx.orig
@@ -44,11 +48,9 @@ This software could be used for analyzing malicious software. Files submitted to
 	mkdir image
 	mkdir iso
 	
-### Download files to the iso folder:
-	cd iso
-	Win10_1909_English_x64.iso
-	virtio-win-0.1.285.iso
-	cd ..
+### Searceh and download files from internet to the iso folder:
+* 	Win10_1909_English_x64.iso
+* 	virtio-win-0.1.285.iso
   
 ### Create a qemu hard drive image:
    qemu-img create -f qcow2 image/hdd.img 40G
