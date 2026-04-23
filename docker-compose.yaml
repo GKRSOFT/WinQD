@@ -1,0 +1,14 @@
+services:
+  Sandbox:
+    image: WinQD/sandbox:latest
+    privileged: true
+    entrypoint: /run/entry.sh
+    restart: none
+    volumes:
+      - ./image:/image
+      - /dev:/dev
+    devices:
+      - /dev/kvm
+      - /dev/net/tun
+    cap_add:
+      - NET_ADMIN
