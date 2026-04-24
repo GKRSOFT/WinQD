@@ -16,7 +16,7 @@ This software could be used for analyzing malicious software. Files submitted to
     Responsibility: The user assumes all responsibility for any damage, data loss, or security breaches resulting from the use of this tool.
 
 
-### WinQD Instalallation:
+### WinQD Installation:
 	cd WinQD
 	wget hxxps://github.com/qemus/qemu/archive/refs/heads/master.zip
 	unzip master.zip .
